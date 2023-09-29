@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ "$#" -lt 1 ]; then
+  echo "Enter at least 1 number"
+  exit 1
+fi
+
+sum=0
+count=0
+
+while [ "$#" -gt 0 ]; do
+  num="$1"
+  sum=$((sum + num))
+  product=$((product * num))
+  count=$((count + 1))
+  shift
+done
+
+average=$((sum / count))
+
+
+echo "Average: $average"
